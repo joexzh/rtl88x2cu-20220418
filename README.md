@@ -18,7 +18,7 @@ Bus 003 Device 002: ID 0bda:c812 Realtek Semiconductor Corp. 802.11ac NIC
 
 ## tested OS:
 
-- Linux debian unstable 6.6.9-amd6
+- Linux debian unstable 6.6.9-amd64
 
 ## install
 
