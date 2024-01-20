@@ -1,3 +1,4 @@
+.*
 *.o
 *.ko
 *.mod
@@ -5,3 +6,4 @@
 Module.symvers
 modules.order
 88x2cu.mod.c
+!.gitignore
