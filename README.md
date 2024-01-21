@@ -22,18 +22,43 @@ Bus 003 Device 002: ID 0bda:c812 Realtek Semiconductor Corp. 802.11ac NIC
 
 ## install
 
+### dkms
+
+```bash
+./dkms-install.sh
+```
+An editor will be prompted for `/etc/modprobe.d/88x2cu.conf` before finishing the installation, you can just close it if don't need to modify any settings.
+
+### without dkms
+
 ```bash
 sudo bash ./install.sh
 ```
 
-This adds a kernel module named `88x2cu`.
+This adds a kernel module named `88x2cu` to `/lib/modules/YOUR_KERNEL_VER/kernel/drivers/net/wireless/88x2cu.ko`
 
-Don't forget to blacklist the problematic kernel module `rtw88_8822cu`:
+Don't forget to blacklist the original kernel module `rtw88_8822cu`:
 
 ```bash
 sudo echo 'blacklist rtw88_8822cu' >> /etc/modprobe.d/88x2cu.conf
 ```
 
 Reboot.
+
+## uninstall
+
+### dkms
+
+```bash
+./dkms-remove.sh
+```
+
+### without dkms
+
+```bash
+sudo modprobe -r 88x2cu
+
+sudo ./make uninstall
+```
 
 *The original codebase is downloaded from [here](http://en.comfast.com.cn/uploadfile/2023/1030/20231030025136473.zip).*
