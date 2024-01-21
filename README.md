@@ -58,7 +58,7 @@ Reboot.
 ```bash
 sudo modprobe -r 88x2cu
 
-sudo ./make uninstall
+sudo make uninstall
 ```
 
 *The original codebase is downloaded from [here](http://en.comfast.com.cn/uploadfile/2023/1030/20231030025136473.zip).*
