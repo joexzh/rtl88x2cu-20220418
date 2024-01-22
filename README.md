@@ -22,6 +22,8 @@ Bus 003 Device 002: ID 0bda:c812 Realtek Semiconductor Corp. 802.11ac NIC
 
 ## install
 
+*Note: Driver power save option must be disabled, otherwise the throughput and latency will descend to a horrible extend. See the `./88x2cu.conf`*.
+
 ### dkms
 
 ```bash
