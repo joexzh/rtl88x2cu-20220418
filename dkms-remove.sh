@@ -6,6 +6,6 @@ PACKAGE_VER=5.14.0.3
 
 sudo modprobe -rv 88x2cu
 sudo dkms remove -m $PACKAGE_NAME -v 5.14.0.3
-sudo rm -rf /usr/src/rtl88x2cu-5.14.0.3
+sudo rm -rf /usr/src/$PACKAGE_NAME-$PACKAGE_VER
 
 echo "The driver $PACKAGE_NAME has been uninstalled."
