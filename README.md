@@ -1,8 +1,8 @@
 Driver for rtl88x2cu devices, especially COMFAST CF-812AC V2.
 
-The kernel 6.6 module driver `rtw88_8822cu` doesn't work well with my device COMFAST CF-812AC V2. Instead I use the driver COMFAST provided.
+This driver is the replacement of kernel module `rtw88_8822cu` for better stability and performance.
 
-The original codebase failed to compile on kernel 6.6.9. I added some compatible code for linux kernel > 6.0. All of the modified code refer to https://github.com/cilynx/rtl88x2bu and https://github.com/morrownr/8821cu-20210916, thanks for them!
+The original codebase of this driver failed to compile on kernel 6.6.9. I added some compatible code for linux kernel > 6.0. All of the modified code refer to https://github.com/cilynx/rtl88x2bu and https://github.com/morrownr/8821cu-20210916, thanks for them!
 
 ## tested device:
 
@@ -22,7 +22,7 @@ Bus 003 Device 002: ID 0bda:c812 Realtek Semiconductor Corp. 802.11ac NIC
 
 ## install
 
-*Note: Driver power save option must be disabled, otherwise the throughput and latency will descend to a horrible extend. See the `./88x2cu.conf`*.
+*Note: Driver power save option must be disabled, otherwise the throughput and latency will descend to a horrible extend. See [./88x2cu.conf](./88x2cu.conf)*.
 
 ### dkms
 
