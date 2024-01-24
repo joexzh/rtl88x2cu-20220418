@@ -10,11 +10,9 @@ SCRIPT_PATH="$(dirname "$0")"
 echo "try to un-probe kernel mods: $WRONG_MODULE $MODULE_NAME"
 sudo modprobe -r $WRONG_MODULE
 sudo modprobe -r $MODULE_NAME
-echo "\n"
 
 sudo dkms add "$SCRIPT_PATH" || exit 1
-sudo dkms install -m $PACKAGE_NAME -v $PACKAGE_VER || { sudo dkms remove -m $PACKAGE_NAME -v $PACKAGE_VER; exit 1; }
-echo "\n"
+sudo dkms install -m $PACKAGE_NAME -v $PACKAGE_VER || exit 1
 
 CONFIG_FILE=/etc/modprobe.d/$MODULE_NAME.conf
 
